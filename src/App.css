@@ -1,0 +1,54 @@
+body {
+    /* height: 100vh;
+    background: rgb(34,193,195);
+    background: rgba(34,193,195,1);
+    background-image: linear-gradient(to right top,
+     #d16ba5, #c777b9, #ba83ca, #aa8fd8, 
+     #9a9ae1, #8aa7ec, #79b3f4, #69bff8, 
+     #52cffe, #41dfff, #46eefa, #5ffbf1);
+    background-size: cover; */
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	-webkit-animation: gradient 15s ease infinite;
+	        animation: gradient 15s ease infinite;
+	height: 100vh;
+    padding: 20px
+}
+
+@-webkit-keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+ 
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+label {
+    display: block;
+    font-size:25px; 
+}
+
+input[type="number"] {
+    background: rgba(255, 255, 255, .5);
+    border:0;
+    margin-bottom: 10px;
+    font-size: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
