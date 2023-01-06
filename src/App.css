@@ -12,7 +12,9 @@ body {
 	-webkit-animation: gradient 15s ease infinite;
 	        animation: gradient 15s ease infinite;
 	height: 100vh;
-    padding: 20px
+    padding: 20px;
+    font-size: 25px;
+    
 }
 
 @-webkit-keyframes gradient {
@@ -41,14 +43,49 @@ body {
 
 label {
     display: block;
-    font-size:25px; 
+    font-size:20px; 
 }
 
 input[type="number"] {
     background: rgba(255, 255, 255, .5);
     border:0;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-size: 25px;
     border-radius: 5px;
+    cursor: pointer;
+    width: 100px;
+}
+
+.summary {
+    background: rgba(255, 255, 255, .5);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    font-size: 25px;
+    margin-top: 25px;
+}
+
+.summary label {
+    font-size: 20px;
+}
+
+.num-of-people-control{
+    display: flex;
+    align-items: center;
+}
+
+.num-of-people-control span {
+    display: block;
+    padding: 0 4px;
+}
+
+.num-of-people button {
+    border-radius: 9999px;
+    border: 0;
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
     cursor: pointer;
 }
