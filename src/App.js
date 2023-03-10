@@ -1,22 +1,21 @@
 import './App.css';
-import { useEffect, useState } from 'react';
+import {useEffect, useState } from 'react';
 
 function App() {
 
-  const[bill, setBill] = useState('');
-  const[tip, setTip] = useState('18');
+  const[bill, setBill] = useState();
+  const[tip, setTip] = useState(20);
   const[numOfPpl, setNumOfPpl] = useState(1);
-  const[splitTotal, setSplitTotal] = useState(0)
+  const[splitTotal, setSplitTotal] = useState(0.00)
 
   function calSplitTotal () {
-    const result = (bill*( 1 + parseInt(tip)/100))/parseInt(numOfPpl); 
+    const percentage = 1 + parseInt(tip)/100;
+    const result = ( bill * percentage / numOfPpl)
       return setSplitTotal(result.toFixed(2));
-
   }
 
   function numOfPplPlus(){
     setNumOfPpl(oldValue => oldValue +1);
-
   }
 
   function numOfPplMinus(){
@@ -28,9 +27,13 @@ function App() {
     }
     })
   }
+
+  function handleBillChange(e) {
+    setBill(e.target.value);
+  }
   
   useEffect( ()=> {
-    calSplitTotal();
+    calSplitTotal()
   }, [bill, tip, numOfPpl])
 
   return (
@@ -38,7 +41,7 @@ function App() {
       <label>Bill</label>
       <span>$</span>
       <input type="number" placeholder="0.00" min="0"
-      value={parseInt(bill)} onChange={ e => setBill(e.target.value)}
+      value={bill} onChange={handleBillChange}
       />
       <label>Tip</label>
       <input type="number" placeholder='0' min="0"
