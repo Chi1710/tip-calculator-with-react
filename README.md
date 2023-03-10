@@ -3,3 +3,5 @@ Created a tip calculator with ReactJS fellowing a youtube tutorial
 to get familiar with useState
 
 Users can enter Bill, Tip percentage, No. of people. Then it will calculator the Split total for each person.  
+
+![Alt text](TipCalculatorWithReact.gif) / ![](TipCalculatorWithReact.gif)
