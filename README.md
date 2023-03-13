@@ -5,3 +5,5 @@ to get familiar with useState
 Users can enter Bill, Tip percentage, No. of people. Then it will calculator the Split total for each person.  
 
 ![Alt text](TipCalculatorWithReact.gif)
+
+Demo Link - https://chi1710.github.io/tip-calculator-with-react/
